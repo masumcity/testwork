@@ -3,6 +3,10 @@ const { data, pending, error } = await useFetch(
   "https://admindash.comcitybd.com/api/test-open",
   {
     default: () => [],
+    headers: {
+      "User-Agent": "Mozilla/5.0",
+      Accept: "application/json",
+    },
   },
 );
 </script>
