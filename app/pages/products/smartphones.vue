@@ -7,7 +7,7 @@ const {
   default: () => [],
 });
 
-console.log(products.value);
+// console.log("Products Data:", products.value.products);
 </script>
 
 <template>
@@ -39,14 +39,16 @@ console.log(products.value);
               <p class="text-primary-600 font-bold">₹99.99</p>
               <span
                 class="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs"
-                >New</span
               >
+                New
+              </span>
             </div>
-            <button
+            <NuxtLink
+              :to="`/product/${product.id}`"
               class="mt-4 w-full bg-primary-500 text-white py-2 px-4 rounded-lg hover:bg-primary-600 transition-colors"
             >
-              Add to Cart
-            </button>
+              Details
+            </NuxtLink>
           </div>
         </div>
       </div>
